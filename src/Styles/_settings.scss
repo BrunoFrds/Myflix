@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../Assets/Fonts/Roboto-Regular.ttf);
+}
+
+$color: rgb(255, 255, 255);
+$colorNormal: rgba($color, 0.9);
+$colorHover: rgba($color, 0.6);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto-Regular", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: $color;
+}
