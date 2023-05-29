@@ -13,12 +13,6 @@ const Search = () => {
   "setSearchClicked" permet de mettre à jour cet état. */
   const [isSearchClicked, setSearchClicked] = useState(false);
 
-  /* Séléction de l'élément "searchContener" */
-  const searchDiv = document.getElementById("searchContener");
-
-  /* Séléction de l'élément "searchInput". */
-  const searchInput = document.getElementById("searchInput");
-
   /* Utilisation du hook "useRef" pour créer une référence "searchRef" qui sera utilisé pour obtenir une référence à l'élément du conteneur de recherche "searchForm". */
   const searchRef = useRef(null);
 
@@ -26,21 +20,46 @@ const Search = () => {
   const handleButtonClick = () => {
     /* Ce qui met à jour l'état "isSearchClicked" à "true", affichant la barre de recherche. */
     setSearchClicked(true);
-    /* Et ajoutant une classe "visibleBar" à lélément "searchContener" */
-    searchDiv.classList.add("visibleInput");
-    /* Et en mettant directement le focus sur l'input. */
-    searchInput.focus();
+
+    /* Séléction de l'élément "searchContener" */
+    const searchDiv = document.getElementById("searchContener");
+
+    /* Si "searchDiv" existe, on ajoute une classe "visibleInput" à l'élément "searchContener". */
+    if (searchDiv) {
+      searchDiv.classList.add("visibleInput");
+    }
   };
 
-  /* Utilisation du hook "useEffect" pour exécuter une fonction après le rendu du composant. */
+  /* Utilisation du hook "useEffect" pour définir un effet à chaque changement de la valeur de "isSearchClicked". */
+  useEffect(() => {
+    /* Si "isSearchClicked" à pour valeur "true", alors: */
+    if (isSearchClicked) {
+      /* On séléctionne l'élément "searchInput". */
+      const searchInput = document.getElementById("searchInput");
+
+      /* Et si "searchInput" existe, on lui donne le focus automatiquement. */
+      if (searchInput) {
+        searchInput.focus();
+      }
+    }
+    /* On inclut "isSearchClicked" dans le tableau de dépendance pour spécifier que l'effet doit être seulement déclenché à chaque changement de "isSearchClicked". */
+  }, [isSearchClicked]);
+
+  /* Utilisation du hook "useEffect" pour ajouter et supprimer un écouteur d'évènement "click" à l'élément "searchContener". */
   useEffect(() => {
     /* Appel de la fonction "handleClickOutside" lorsque l'utilisateur clique n'importe où sur la page. */
     const handleClickOustide = (event) => {
       /* Si la référence "searchRef" existe et que l'élément cliqué n'est pas contenu dans "searchRef", cela signifie que le clic est en dehors de la barre de recherche. Dans ce cas, l'état "isSearchClicked" change à "false" pour masquer la barre de recherche. */
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setSearchClicked(false);
-        /* Et supprimer la classe "visibleBar" de l'élément "searchContener" */
-        searchDiv.classList.remove("visibleInput");
+
+        /* Séléction de l'élément "searchContener" */
+        const searchContener = document.getElementById("searchContener");
+
+        /* Si "searchContener" existe, on supprime la classe "visibleBar" de l'élément. */
+        if (searchContener) {
+          searchContener.classList.remove("visibleInput");
+        }
       }
     };
 
