@@ -65,31 +65,47 @@ const Profil = () => {
           onMouseEnter={handleWindowMouseEnter}
           onMouseLeave={handleWindowMouseLeave}
         >
-          <a href="#">
-            <img
-              src={profilJeunesse}
-              alt="Image Logo Jeunesse"
-              className="logoJeunesse"
-            />
-            Jeunesse
-          </a>
-          <a href="#">
-            <span className="iconProfil">{profil}</span>
-            Gérer les profils
-          </a>
-          <a href="#">
-            <span className="iconProfil">{transfert}</span>
-            Transférer un profil
-          </a>
-          <a href="#">
-            <span className="iconProfil">{user}</span>
-            Compte
-          </a>
-          <a href="#">
-            <span className="iconProfil">{help}</span>
-            Centre d'aide
-          </a>
-          <a href="#">Se déconnecter</a>
+          <div className="profilLink">
+            <a href="#">
+              <img
+                src={profilJeunesse}
+                alt="Image Logo Jeunesse"
+                className="logoJeunesse"
+              />
+              <span className="optionJeunesse">Jeunesse</span>
+            </a>
+          </div>
+          <span className="line1"></span>
+          <div className="profilLink">
+            <a href="#">
+              <span className="iconProfil">{profil}</span>
+              <span className="optionLink">Gérer les profils</span>
+            </a>
+          </div>
+          <div className="profilLink">
+            <a href="#">
+              <span className="iconProfil">{transfert}</span>
+              <span className="optionLink">Transférer un profil</span>
+            </a>
+          </div>
+          <div className="profilLink">
+            <a href="#">
+              <span className="iconProfil">{user}</span>
+              <span className="optionLink">Compte</span>
+            </a>
+          </div>
+          <div className="profilLink">
+            <a href="#">
+              <span className="iconProfil">{help}</span>
+              <span className="optionLink">Centre d'aide</span>
+            </a>
+          </div>
+          <span className="line2"></span>
+          <div className="profilLink">
+            <a href="#" className="disconnect">
+              <span className="optionLink">Se déconnecter</span>
+            </a>
+          </div>
         </div>
       )}
     </div>

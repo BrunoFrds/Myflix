@@ -6,12 +6,13 @@ import Search from "../../Components/Search/Search";
 import Notification from "../../Components/Notification/Notification";
 import Profil from "../../Components/Profil/Profil";
 
+/* Création du composant. */
 const Header = () => {
   return (
     <header>
       <div className="headerBar">
         <div className="logoLinks">
-          <img src={logoheader} alt="logo myflix" className="logoHeader" />
+          <Navigation logo={logoheader} />
           <Navigation title="Accueil" />
           <Navigation title="Series" />
           <Navigation title="Films" />

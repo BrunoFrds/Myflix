@@ -2,12 +2,13 @@
 import { NavLink } from "react-router-dom";
 
 /* Création du composant. */
-const Navigation = ({ title }) => {
+const Navigation = ({ title, logo }) => {
   return (
     <div>
       <nav>
         <NavLink to="/" className="link">
           {title}
+          {logo && <img src={logo} alt="logo myflix" className="logoHeader" />}
         </NavLink>
       </nav>
     </div>
