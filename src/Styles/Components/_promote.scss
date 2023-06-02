@@ -1,4 +1,5 @@
 .promote{
+    position: relative;
     width: 100%;
     height: 46vw;
     .promoteContener{
@@ -30,5 +31,13 @@
             display: flex;
             justify-content: flex-start;
         }
+    }
+    .gradientBorder{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 30px solid;
+        border-image: linear-gradient(to bottom, transparent, rgb(20,20,20)) 30;
     }
 }

@@ -34,6 +34,7 @@ const Promote = ({ id, cover, alt, title, text, description }) => {
           />
         </div>
       </div>
+      <div className="gradientBorder"></div>
     </div>
   );
 };
