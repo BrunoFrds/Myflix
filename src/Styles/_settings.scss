@@ -7,6 +7,19 @@ $color: rgb(255, 255, 255);
 $colorNormal: rgba($color, 0.9);
 $colorHover: rgba($color, 0.6);
 
+@mixin transition {
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes inputAnime {
+    from {
+        transform: translateX(280px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
 *{
     margin: 0;
     padding: 0;

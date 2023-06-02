@@ -1,0 +1,34 @@
+.promote{
+    width: 100%;
+    height: 46vw;
+    .promoteContener{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 35%;
+        height: 100%;
+        margin-left: 4vw;
+        .promoteTextContener{
+            .promoteTitle{
+                color: aliceblue;
+                margin: 0 0 1vw 0;
+                font-size: 6vw;
+            }
+            .promoteText{
+                font-weight: bold;
+                color: $colorNormal;
+                margin: 1vw 0 1.5vw 0;
+                font-size: 1.5vw;
+            }
+            .promoteDescription{
+                font-size: 1.2vw;
+                color: $colorNormal;
+                margin: 0 0 1.5vw 0;
+            }
+        }
+        .promoteButtons{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}

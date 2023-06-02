@@ -1,0 +1,53 @@
+.playButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    width: 9.5vw;
+    min-height: 32px;
+    height: 3vw;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0.8vw 0 0;
+    background-color: $color;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(191, 191, 191);
+    }
+    .playButtonIcon{
+        font-size: 1.6vw;
+        margin: 0 10px 0 0;
+    }
+    .playButtonTitle{
+        font-size: 1.2vw;
+        font-weight: bold;
+
+    }
+}
+
+.infoButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 130px;
+    width: 12vw;
+    min-height: 32px;
+    height: 3vw;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(77, 77, 77,0.8);
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(44, 44, 45);
+    }
+    .infoButtonIcon{
+        font-size: 1.6vw;
+        margin: 0 10px 0 0;
+        color: $colorNormal;
+    }
+    .infoButtonTitle{
+        font-size: 1.2vw;
+        font-weight: bold;
+        color: $colorNormal;
+    }
+}
