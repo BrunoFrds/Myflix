@@ -1,5 +1,6 @@
 header {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
@@ -10,7 +11,7 @@ header {
         display: flex;
         justify-content: space-between;
         height: 100%;
-        margin: 0 30px;
+        margin: 0 2vw;
         font-size: min(1vw ,14px);
         .logoLinks{
             display: flex;
@@ -201,5 +202,5 @@ header {
 }
 
 .opacity{
-        background-image: linear-gradient(to bottom, rgb(06,06,06), rgb(20,20,20));
+    background-image: linear-gradient(to bottom, rgb(06,06,06), rgb(20,20,20));
 }

@@ -1,30 +1,17 @@
-import Promote from "../../Components/Promote/Promote";
-import seriesData from "../../Assets/Api/Series";
+import PopularMovies from "../../Assets/Api/PopularMovies";
+import PopularSeries from "../../Assets/Api/PopularSeries";
+import SearchSerieMovie from "../../Assets/Api/SearchSerieMovie";
 
 const Accueil = () => {
-  const serieId = "s001";
-
-  const serie = seriesData.find((item) => item.id === serieId);
-  console.log(serie);
-
-  if (!serie) {
-    return null;
-  }
-
   return (
     <div className="home">
-      {serie && (
-        <Promote
-          key={serie.id}
-          id={serie.id}
-          cover={serie.cover}
-          alt={serie.alt}
-          title={serie.title}
-          text={"Regardez la saison 3 maintenant"}
-          description={serie.description}
-        />
-      )}
-      <div></div>
+      <PopularSeries apiKey={"d7f02c3620477a7aa43e9ebaf723c525"} />
+      <PopularMovies apiKey={"d7f02c3620477a7aa43e9ebaf723c525"} />
+      <SearchSerieMovie
+        apiKey={"d7f02c3620477a7aa43e9ebaf723c525"}
+        query={"Game of thrones"}
+      />
+      <div className="cardList"></div>
     </div>
   );
 };
