@@ -1,17 +1,9 @@
-import PopularMovies from "../../Assets/Api/PopularMovies";
-import PopularSeries from "../../Assets/Api/PopularSeries";
-import SearchSerieMovie from "../../Assets/Api/SearchSerieMovie";
+import Slider from "../../Components/Slider/Slider";
 
 const Accueil = () => {
   return (
     <div className="home">
-      <PopularSeries apiKey={"d7f02c3620477a7aa43e9ebaf723c525"} />
-      <PopularMovies apiKey={"d7f02c3620477a7aa43e9ebaf723c525"} />
-      <SearchSerieMovie
-        apiKey={"d7f02c3620477a7aa43e9ebaf723c525"}
-        query={"Game of thrones"}
-      />
-      <div className="cardList"></div>
+      <Slider fetchURL={"https://api.themoviedb.org/3/movie/popular?api_key=5ebfb2df8453f4c8e25c83c93fe8c8c0"} />
     </div>
   );
 };
